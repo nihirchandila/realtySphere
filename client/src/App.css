@@ -1,0 +1,141 @@
+@import "tailwindcss";
+/* [#406093,#4C8CE4, #91D06C, #FFF799] */
+
+:root {
+  /* Primary */
+  --color-primary: #406093;
+  --color-primary-light: #5478b4;
+
+  /* Accent */
+  --color-accent: #91D06C;
+  --color-accent-hover: #a0dd7c;
+
+  /* Success */
+  --color-success: #16a34a;
+
+  /* Danger */
+  --color-danger: #dc2626;
+
+  /* Background */
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+
+  /* Text */
+  --color-text: #ffffff;
+  --color-text-light: #64748b;
+
+  /* Borders */
+  --color-border: #e2e8f0;
+
+  /* Shadows */
+  --shadow-primary: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+  /* Radius */
+  --radius-primary: 16px;
+}
+
+/* =========================================
+   BASE STYLES
+   ========================================= */
+
+body {
+  @apply  text-slate-900 antialiased;
+  font-family: "DM Sans", sans-serif;
+}
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+
+.heading-xl {
+  @apply font-[300] text-[60px] md:text-[80px] leading-[1] text-white;
+}
+
+.heading-lg {
+  @apply text-4xl md:text-5xl font-bold leading-tight;
+}
+
+.heading-md {
+  @apply text-3xl md:text-4xl font-semibold leading-snug;
+}
+
+.heading-sm {
+  @apply text-2xl font-semibold;
+}
+
+.text-body-lg {
+  @apply text-lg text-white leading-relaxed;
+}
+
+.text-body {
+  @apply text-base text-white leading-relaxed;
+}
+
+.text-small {
+  @apply text-sm text-white leading-relaxed;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3.5 text-xs font-medium transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-[#ffffff] text-black hover:bg-[#d5d5d5] uppercase;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-3 bg-gray-900 hover:bg-gray-700 transition-colors text-white text-sm font-semibold px-6 py-3.5 rounded-full shadow-md;
+}
+
+.btn-outline {
+  @apply border border-slate-300 bg-white text-slate-800 hover:bg-slate-100;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.btn-success {
+  @apply bg-green-600 text-white hover:bg-green-700;
+}
+
+/* =========================================
+   INPUTS
+   ========================================= */
+
+.input-primary {
+  @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 outline-none transition-all duration-200;
+}
+
+.input-primary:focus {
+  @apply border-blue-500 ring-4 ring-blue-100;
+}
+
+
+
+
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-slate-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
