@@ -95,7 +95,7 @@ export default function PropertyViewer3D() {
     // Load GLB
     const loader = new GLTFLoader();
     loader.load(
-      `${SERVER_URL}/uploads/model/scene.gltf`,
+      `/uploads/model/scene.gltf`,
       (gltf) => {
         const model = gltf.scene;
 

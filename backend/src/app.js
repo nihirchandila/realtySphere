@@ -1,12 +1,20 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-
+import path from "path";
 import connectDB from "./config/db.js";
 import agentRoutes from "./routes/agentRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import propertyRoutes from "./routes/propertyRoutes.js";
 import contactRoutes from "./routes/contactRoutes.js";
+
+//hosting configuration
+const path = require("path");
+const __dirname = path.resolve();
+app.use(
+  "/uploads",
+  express.static(path.join(__dirname, "../uploads"))
+)
 
 
 dotenv.config();
@@ -23,6 +31,12 @@ app.use("/api/property", propertyRoutes);
 app.use("/api/agent", agentRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/contact", contactRoutes);
+
+
+app.use(express.static(path.join(__dirname, "../../client/dist")));
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../../client/dist/index.html"));
+});
 
 
 const PORT = process.env.PORT || 3000;
