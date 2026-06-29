@@ -144,7 +144,7 @@ export default function PropertyForm({ form, setForm, imagePreviews, onFileChang
             {imagePreviews.map((src, i) => (
               <div key={i} className="relative w-16 h-16 rounded-lg overflow-hidden border border-gray-100 group">
                 <img
-                  src={typeof src === "string" && src.startsWith("/uploads") ? `http://localhost:3000${src}` : src}
+                  src={src}
                   alt="" className="w-full h-full object-cover"
                 />
                 <button type="button" onClick={() => onRemoveImage(i)}

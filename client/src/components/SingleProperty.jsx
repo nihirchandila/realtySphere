@@ -104,7 +104,7 @@ export default function PropertyDetailPage() {
         if (data._id) {
           setProperty(data);
           if (data.images?.length > 0) {
-            setActiveImage(`/${data.images[0]}`);
+            setActiveImage(`${data.images[0]}`);
           }
         }
       } catch {

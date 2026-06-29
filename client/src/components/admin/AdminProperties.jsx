@@ -20,7 +20,7 @@ const Badge = ({ status }) => {
 
 const PropertyModal = ({ property, onClose, onApprove, onDisapprove }) => {
   const imageUrl = property.images?.[0]
-    ? `http://localhost:3000${property.images[0]}`
+    ? `${property.images[0]}`
     : "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400";
 
   return (
@@ -195,7 +195,7 @@ export default function AdminProperties({ filter }) {
                 ) : (
                   filtered.map(p => {
                     const thumb = p.images?.[0]
-                      ? `http://localhost:3000${p.images[0]}`
+                      ? `${p.images[0]}`
                       : "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=100";
                     return (
                       <tr key={p._id} className="hover:bg-gray-50/70 transition-colors">
