@@ -104,7 +104,7 @@ export default function PropertyDetailPage() {
         if (data._id) {
           setProperty(data);
           if (data.images?.length > 0) {
-            setActiveImage(`/uploads/${data.images[0]}`);
+            setActiveImage(`/${data.images[0]}`);
           }
         }
       } catch {
@@ -137,7 +137,7 @@ export default function PropertyDetailPage() {
     );
   }
 
-  const imageUrls = property.images?.map(img => `/uploads/${img}`) || [];
+  const imageUrls = property.images?.map(img => `/${img}`) || [];
   const fallback = "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800";
   const displayImages = imageUrls.length > 0 ? imageUrls : [fallback];
   const currentActiveImage = activeImage || displayImages[0];

@@ -9,7 +9,7 @@ const formatPrice = (price) => {
 
 const PropertyCard = ({ property }) => {
   const thumbnail = property.images?.[0]
-    ? `/uploads/${property.images[0]}`
+    ? `/${property.images[0]}`
     : "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600";
 
   return (
